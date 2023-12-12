@@ -1,0 +1,309 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+    padding-left: 0 !important;
+}
+body{
+    background-color: #F5F5F5;
+}
+.font{
+    font-family: 'Roboto', sans-serif;
+}
+.pt-0{
+    margin-bottom: 0 !important;
+    margin-top: o !important;
+}
+.line{
+    width: 50px;
+    height: 5px;
+    background-color: #0078ff;
+    margin: 0 auto;
+}
+.line-fix{
+    height: 3px;
+    background-color: #0078ff;
+    width: 100px;
+}
+.clr{
+    clear: both;
+}
+/* Start NavBar */
+.navbar{
+    --bs-navbar-hover-color: #fff !important;
+    position: fixed !important;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+.navbar-nav{
+    --bs-nav-link-color: #fff !important;
+}
+.navbar a{
+    position: relative;
+}
+.navbar li a:hover::before{
+    width: 90%;
+    transition: all .5s ease-in-out; 
+}
+.navbar li a:before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -1px;
+    left: 0;
+    background-color: #fff;
+}
+body:has(#home:target) .hom::before,
+body:has(#about:target) .abo::before,
+body:has(#services:target) .ser::before,
+body:has(#work:target) .wor::before,
+body:has(#blog:target) .blo::before,
+body:has(#contact:target) .con::before{
+    width: 90%;
+}
+/* Start Home */
+.header{
+    background-image: linear-gradient(#0009, #0009) ,url(../images/hero-bg.jpg);
+    background-position: center center;
+    background-size: cover;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+.header-conent h1{
+    font-size: 4.5rem !important;
+}
+.header-conent p::after{
+    content: ' |';
+    animation-name: typing;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes typing{
+    0%{content: ' F|';}
+    10%{content: ' Fr|';}
+    20%{content: ' Fre|';}
+    30%{content: ' Free|';}
+    40%{content: ' Freel |';}
+    50%{content: ' Freela|';}
+    60%{content: ' Freelan|';}
+    70%{content: ' Freelanc|';}
+    80%{content: ' Freelance|';}
+    90%{content: ' Freelancer|';}
+    100%{content: ' Freelance|';}
+    90%{content: ' Freelanc|';}
+    80%{content: ' Freelan|';}
+    70%{content: ' Freela|';}
+    60%{content: ' Freel|';}
+    50%{content: ' Free|';}
+    40%{content: ' Fre|';}
+    30%{content: ' Fr|';}
+    20%{content: ' F|';}
+    10%{content: ' |';}
+}
+
+/* Start About */
+.skills p{
+    margin-bottom: 5px !important;
+}
+.skills .progress{
+    margin-bottom: 20px;
+    border-radius: 0;
+    height: .8rem;
+}
+
+/* Start Services */
+.circle{
+    padding-block: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle:hover i{
+    color: #fff;
+    z-index: 3;
+}
+.circle:hover::before{
+    box-shadow: 0 0 0 10px #CDE1F8;
+    background-color: #0062D3 ;
+}
+.circle::before{
+content: "";
+position: absolute;
+width: 100px;
+height: 100px;
+box-shadow: 0 0 0 10px #0078ff;
+border-radius: 50%;
+transition: box-shadow .3s, background-color .3s ;
+}
+@media (max-width: 767.98px) {
+    .row .ima img{
+        width: 100%;
+    }
+    .firstone{
+        flex-direction: column;
+    }
+    .firsttwo{
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
+@media (max-width: 575.98px){
+    .firstone{
+        flex-direction: column;
+    }
+    .firsttwo{
+        flex: 0 0 auto;
+        width: 100%;
+    }
+} 
+/* Start Services Num */
+.services-image{
+    background-image: linear-gradient(#0077ffa7, #0077ffa7) ,url(../images/counters-bg.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 70vh;
+}
+@media (max-width: 991.98px) {
+    .services-image {
+        min-height: 130vh;
+    }
+}
+@media (max-width: 767.98px) {
+    .services-image {
+        min-height: 130vh;
+    }
+}
+@media (max-width: 575.98px){
+    .services-image {
+        min-height: 130vh;
+    }
+} 
+.conter-box .circle::before{
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 0 0 10px #CDE1F8;
+    border-radius: 50%;
+}
+.conter-box .fs{
+    font-size: 20px;
+}
+
+/* Start Portfolio */
+.cir .circl::before{
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 3px solid #0078ff;
+    border-radius: 50%;
+}
+.box-work {
+    overflow: hidden;
+}
+.box-work img{
+    transition: scale .5s;
+}
+.box-work:hover img{
+    scale: 1.4;
+}
+/* Start Blog */
+.card-im img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 4px;
+}
+.card-hour{
+    float: right;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: baseline;
+}
+.card-bx{
+    position: absolute;
+    text-align: center;
+    top: -16px;
+    left: 15px;
+    right: 15px;
+    line-height: 25px;
+    overflow: hidden;
+}
+.text-bx{
+    display: inline-block;
+    color: #fff;
+    padding: 2px 20px 0px;
+    overflow: hidden;
+    background-color: #0078ff;
+    border-radius: 4px;
+}
+/* Start Testemonial */
+.work-two{
+    background-image: linear-gradient(#0077ffa7, #0077ffa7) ,url(../images/overlay-bg.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.carousel-indicators [data-bs-target] {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+}
+.carousel-indicators{
+    bottom: -20%;
+}
+/* Start Contact */
+.img-contact{
+    background-image: linear-gradient(#0077ffa7, #0077ffa7) ,url(../images/overlay-bg.jpg);
+    height: 100vh;
+}
+button{
+    padding: 10px 24px;
+}
+form :is(input, textarea):focus {
+    outline: none;
+    border: 1px solid #0078ff !important;
+    box-shadow: 0px 0px 0px 3px #0078ff73;
+}
+.circl:hover .fa-brands{
+    color: #fff !important;
+    z-index: 3 !important;
+    position: relative !important;
+    transition: all .3s;
+}
+.circl:hover::before{
+    box-shadow: 0 0 0 3px #CDE1F8;
+    background-color: #0062D3 ;
+    transition: all .4s;
+}
+button:hover{
+    padding: 10px 24px;
+    box-shadow: 0px 0px 0px 3px #0078ff73;
+    transition: 0.4s;
+}
+@media (max-width: 575.98px){
+    .jqau {
+        width: 100%;
+        line-height: 30px;
+    }
+    .jqau input{
+        margin-block: 5px;
+    }
+} 
+/* Start Footer */
+footer{
+    background-color: #0062D3;
+    box-shadow: 1px -3px 20px 0px #00000061 !important;
+}
+
